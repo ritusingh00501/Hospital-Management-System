@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="style2.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+ function func(){
+
+                var u=document.myForm.p_name.value;
+                var p=document.myForm.p_date.value;
+		var pm=document.myForm.p_mode.value;
+	        var pa=document.myForm.p_amt.value;
+                if(u=="")
+                        {
+                         alert(" Name can not be blank");
+                         return false;
+                         }
+                else if(p=="")
+                           {
+                            alert("Enter Date");
+                            return false;
+
+                           }
+                 else if(pm=="")
+		   {
+
+                       alert("please select payment mode");
+		       return false;
+					   }
+		
+
+		 else if(pa=="")
+                   {
+
+                       alert("please enter payment amount");
+                       return false;
+                                           }
+                       }
+			
+
+
+       </script>
+   </head>
+<body>
+	 <body>
+
+<div class="container">
+         <div class="title">Enter payment details</div>
+          <div class="content">
+           <form action="payment.php" name="myForm" method=post>
+            <div class="user-details">
+             <div class="input-box">
+              <span class="details">Payment Id</span>
+               <input type="text" name=pid placeholder="Enter Payment Id" required>
+             </div>
+             <div class="input-box">
+              <span class="details">Patient Name</span>
+              <input type="text" name=p_name placeholder="Enter your fullname" required>
+             </div>
+             <div class="input-box">
+             <span class="details">Date</span>
+             <input type="date" name=p_date placeholder="Enter Date" required>
+            </div>
+	    <div class="input-box">
+            <span class="details">Payment Mode</span>
+		 <select id="payment" name="p_mode" required>
+                             <option value="credit">Credit</option>
+                               <option value="debit">Debit</option>
+				<option value="cash">Cash</option>
+				<option value="online">Online</option>
+                                
+                   </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Amount</span>
+            <input type="text" name=p_amt placeholder="Enter Amount" required>
+          </div>
+           </div>  
+	    <div class="button">
+              <input type="submit" value="Submit">
+              </div>
+	    </form>
+	 </div>
+	 </div>
+     </div>
+	
+	
+		 
+
+</body>
+</html>

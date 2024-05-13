@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>	  
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>
+    <link rel="stylesheet" href="style.css">--->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script>
+ function func(){
+
+                var u=document.myForm.first_name.value;
+                var p=document.myForm.p_date.value;
+		var pm=document.myForm.p_mode.value;
+	        var pa=document.myForm.p_amt.value;
+                if(u=="")
+                        {
+                         alert(" Name can not be blank");
+                         return false;
+                         }
+                else if(p=="")
+                           {
+                            alert("Enter Date");
+                            return false;
+
+                           }
+                 else if(pm=="")
+		   {
+
+                       alert("please select payment mode");
+		       return false;
+					   }
+		
+
+		 else if(pa=="")
+                   {
+
+                       alert("please enter payment amount");
+                       return false;
+                                           }
+                       }
+			
+
+
+       </script>
+
+        </head>
+        <body style="background-image:url(payment.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+	
+		<h4 style="text-align:center;color:blue;padding-top:80px;font-size:30px;"><font align="right">Enter Your Payment Details</font></h4><br><br>
+		<center><form  name="myForm" method="post" action="payment.php"  autocomplete="off" onsubmit=" return func()" >
+                   <div class="container">
+			<label class="item">Enter ID </label> <input type="num" name="pid"><br><br>
+                  <label class="item"> Enter name   </label>    <input type="text" name="p_name" pattern="[a-zA-Z].{1,}"><br><br>
+                  <label class="item">Enter Payment date    </label>  <input type="date" name="p_date" ><br><br>
+                   <label class="item">Choose  Payment mode:</label>
+                   <select id="payment" name="p_mode">
+                             <option value="credit">Credit</option>
+                               <option value="debit">Debit</option>
+				<option value="cash">Cash</option>
+				<option value="online">Online</option>
+                                
+                   </select><br><br>
+                   <label class="item">Amount</label> <input type="num" name="p_amt"><br><br>
+
+
+                   <input type="submit" value="Submit"><br><br>
+          </div></center>
+	
+  
+
+</body>
+</html>

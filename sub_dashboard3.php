@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Dashboard Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <style>
+
+/*body {
+  background-image: url("dashboard.jpg");
+}
+
+     Custom styles for this dashboard page */
+    body {
+      padding-top: 50px;
+    }
+    
+    .content {
+      margin-left: 30px;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<div class="content">
+    <h1>Welcome to your dashboard!</h1>
+    <p>Here you can view all of your important data and manage your account settings.</p>
+    <div class="row">
+      <!---<div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Patients</h5>
+            <p class="card-text">View and manage all of your Patient Details.</p>
+            <a href="add_patient.html" class="btn btn-primary">Insert</a>
+          </div>
+        </div>
+      </div>--->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Patient</h5>
+            <p class="card-text">View and manage all of your Patient.</p>
+            <a href="p_update.html" class="btn btn-primary">Update</a>
+          </div>
+        </div>
+  </div>
+<div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Patient</h5>
+            <p class="card-text">View and manage all of your Patient.</p>
+            <a href="p_delete.html" class="btn btn-primary">Delete</a>
+          </div>
+        </div>
+  </div>
+<div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Patient</h5>
+            <p class="card-text">View and manage all of your Patient.</p>
+            <a href="patient.php" class="btn btn-primary">View All</a>
+	    <a href="ajax1.html" class="btn btn-primary">View By Name</a>
+          </div>
+        </div>
+  </div>
+</div>
+<div>
+	<a href="dashboard.php" class="btn btn-primary">Back</a>
+</div>
+
+</html>
+

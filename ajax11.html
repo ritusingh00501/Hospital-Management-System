@@ -1,0 +1,39 @@
+<html>
+	<head>
+	<script type="text/javascript">
+		function display(str)
+		{
+			if(str=="")
+			{
+				document.getElementById("div1").innerHTML="";
+				return;
+			}
+			else
+			{
+				var x=new XMLHttpRequest();
+			//	document.write(str);
+				x.onreadystatechange= function()
+				{
+					if(x.readyState==4 && x.status==200)
+					{
+						document.getElementById("div1").innerHTML=x.responseText;
+					}
+				}
+				x.open("GET","patient2.php?q="+str,true);
+				x.send();
+			}
+		}
+		</script>
+		</head>
+		<body style="background-color:powderblue;">
+				<center><h3>Enter patient name::</h3>
+					<input type=text onkeyup="display(this.value)"></center>
+				<br><br><br>
+				<font size="25"><center><b>Patient Detail</b></center></font>
+				<center><div id="div1">Data will be displayed here...</div><center>
+
+		</body>
+	<footer>
+	<center><a href=doctor_dashboard.php><h3>GOTO Dashboard</h3></a></center>
+	</footer>
+</html>

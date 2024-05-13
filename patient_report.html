@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<script type="text/javascript">
+		function display(str)
+		{
+			if(str=="")
+			{
+				document.getElementById("div1").innerHTML="";
+				return;
+			}
+			else
+			{
+				var x=new XMLHttpRequest();
+			//	document.write(str);
+				x.onreadystatechange= function()
+				{
+					if(x.readyState==4 && x.status==200)
+					{
+						document.getElementById("div1").innerHTML=x.responseText;
+					}
+				}
+				x.open("GET","patient_report.php?q="+str,true);
+				x.send();
+			}
+		}
+		</script>
+		</head>
+		<body style="background-color:powderblue;">
+				<center><h3>Enter patient registeration date::</h3>
+					<input type=date onchange="display(this.value)"></center>
+				<br><br><br>
+				<center><div id="div1">Data will be displayed here...</div><center>
+				<center><a href=dashboard.php><h3>GOTO  Dashboard</h3></a></center>
+
+		</body>
+</html>
